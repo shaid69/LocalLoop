@@ -1,0 +1,1 @@
+<?php echo '<header><h1>LocalLoop</h1></header>'; ?>

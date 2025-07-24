@@ -1,0 +1,1 @@
+<?php echo '<footer><p>&copy; 2025 LocalLoop</p></footer>'; ?>

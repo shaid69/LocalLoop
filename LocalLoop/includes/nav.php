@@ -1,0 +1,1 @@
+<?php echo '<nav><a href="../pages/home.php">Home</a> | <a href="../logout.php">Logout</a></nav>'; ?>
