@@ -8,39 +8,47 @@ html {
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #232526 0%, #414345 100%);
-  color: #e0e0e0;
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Header / Nav / Footer */
 header, nav, footer {
-  background: linear-gradient(90deg, #232526 0%, #0f2027 100%);
+  background: #004d80;
   color: #fff;
   padding: 15px;
   text-align: center;
 }
 nav a {
   margin: 0 15px;
-  color: #00c6ff;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s;
 }
 nav a:hover {
-  color: #ffb347;
+  color: #ffcc00;
 }
+
+/* Container & Box */
 .container, .welcome-box {
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   margin: 20px auto;
-  background: linear-gradient(120deg, #232526 60%, #414345 100%);
+  background: #fff;
   padding: 24px;
-  border-radius: 18px;
-  border: 2px solid #00c6ff33;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border: 1px solid #e0e0e0;
 }
+
+/* Forms */
 form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   margin: 0 auto;
 }
 input, select, textarea, button {
@@ -48,43 +56,69 @@ input, select, textarea, button {
   margin: 10px 0;
   padding: 12px;
   font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #00c6ff55;
-  background: #232526;
-  color: #e0e0e0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  transition: border 0.3s, box-shadow 0.3s;
 }
+input:focus, select:focus, textarea:focus {
+  border: 1px solid #004d80;
+  box-shadow: 0 0 6px rgba(0,77,128,0.2);
+  outline: none;
+}
+
+/* Buttons */
 button {
-  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  background: #004d80;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
+  transition: background 0.3s;
 }
 button:hover {
-  background: linear-gradient(90deg, #ffb347 0%, #232526 100%);
+  background: #003355;
 }
 a.button-link {
   display: inline-block;
   padding: 12px 20px;
-  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  background: #004d80;
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: 500;
+  transition: background 0.3s;
 }
 a.button-link:hover {
-  background: linear-gradient(90deg, #ffb347 0%, #232526 100%);
+  background: #003355;
 }
+
+/* Alerts */
 .alert {
-  background: linear-gradient(90deg, #ffb347 0%, #ffcc80 100%);
-  color: #232526;
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 12px 18px;
   margin-bottom: 16px;
   font-weight: 500;
-  border: 1px solid #ffb34755;
 }
+.alert-success {
+  background: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+}
+.alert-warning {
+  background: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffecb5;
+}
+.alert-danger {
+  background: #f8d7da;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+/* Services */
 .service-list {
   display: flex;
   flex-wrap: wrap;
@@ -95,86 +129,81 @@ a.button-link:hover {
 .service-card {
   max-width: 260px;
   width: 100%;
-  background: linear-gradient(120deg, #232526 60%, #414345 100%);
-  border-radius: 16px;
+  background: #fff;
+  border-radius: 12px;
   padding: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
 }
 .service-card:hover {
-  background: #232526;
+  transform: translateY(-4px);
 }
 .service-img {
   width: 100%;
   max-width: 220px;
   height: 140px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-bottom: 12px;
 }
 .service-info h4 {
-  color: #00c6ff;
+  color: #004d80;
   margin: 0 0 8px 0;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 .service-info p {
-  color: #e0e0e0;
-  font-size: 0.98rem;
+  color: #555;
+  font-size: 0.95rem;
   margin-bottom: 8px;
 }
 .service-info span {
-  color: #ffb347;
+  color: #ff6600;
   font-weight: 600;
   font-size: 1rem;
 }
+
+/* Dashboard */
 .dashboard {
   max-width: 1100px;
   width: 100%;
   margin: 24px auto;
   padding: 24px;
-  background: linear-gradient(120deg, #232526 60%, #414345 100%);
-  border-radius: 18px;
-  border: 2px solid #00c6ff33;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 .dashboard h2, .dashboard h3 {
-  color: #00c6ff;
+  color: #004d80;
   margin-top: 24px;
   margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-.dashboard nav {
-  margin-bottom: 24px;
+  letter-spacing: 0.5px;
 }
 .dashboard table {
   width: 100%;
   border-collapse: collapse;
-  background: #232526;
-  border-radius: 10px;
   margin-bottom: 32px;
 }
 .dashboard th, .dashboard td {
   padding: 12px 10px;
   text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 .dashboard th {
-  background: linear-gradient(90deg, #232526 0%, #00c6ff 100%);
+  background: #004d80;
   color: #fff;
   font-weight: 600;
-  border-bottom: 2px solid #00c6ff55;
-}
-.dashboard tr {
-  background: #414345;
 }
 .dashboard tr:nth-child(even) {
-  background: #353637;
+  background: #f9f9f9;
 }
 .dashboard tr:hover {
-  background: #232526;
+  background: #eef7ff;
 }
 .dashboard td {
-  color: #e0e0e0;
-  border-bottom: 1px solid #232526;
+  color: #333;
 }
 .dashboard form {
   margin-bottom: 16px;
@@ -183,25 +212,8 @@ a.button-link:hover {
 .dashboard input[type="text"], .dashboard button {
   margin: 0 0 8px 0;
 }
-input[type="datetime-local"] {
-  background: #232526;
-  color: #e0e0e0;
-  border: 1px solid #00c6ff55;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 1rem;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 10px 0;
-  width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
-}
-input[type="datetime-local"]:focus {
-  border-color: #00c6ff;
-  box-shadow: 0 0 8px #00c6ff55;
-  outline: none;
-  background: #2c3e50;
-}
+
+/* Responsive */
 @media (max-width: 600px) {
   .container, .welcome-box {
     max-width: 98vw;
@@ -214,8 +226,6 @@ input[type="datetime-local"]:focus {
   }
   .service-card {
     max-width: 98vw;
-    width: 100%;
-    margin: 0 auto;
   }
   header, nav, footer {
     padding: 8px;
@@ -227,15 +237,12 @@ input[type="datetime-local"]:focus {
   }
   .dashboard {
     padding: 8px;
-    border-radius: 10px;
   }
   .dashboard table, .dashboard th, .dashboard td {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding: 6px 4px;
   }
   .dashboard h2, .dashboard h3 {
     font-size: 1.1rem;
-    margin-top: 16px;
-    margin-bottom: 8px;
   }
 }
